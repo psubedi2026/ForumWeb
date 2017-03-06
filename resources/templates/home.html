@@ -15,6 +15,13 @@ Welcome, {{.}}!
     <button type="submit">Logout</button>
 </form>
 <br>
+
+<form action="/create-message" method="post">
+    <input type="text" placeholder="Enter your message" name="messageText" width="200"/>
+    <input type="hidden" value="{{replyId}}" name="replyId"/>
+    <button type="submit">Post Message</button>
+</form>
+
 {{/userName}}
 
 {{#messages}}
